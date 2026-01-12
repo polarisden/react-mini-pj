@@ -10,7 +10,7 @@ function InputBox(props){
           type="text"
           name={props.name}
           placeholder={props.placeholder}
-          className="h-10 border border-[#e5e5e5] rounded-[8px] pl-2"
+          className={`h-10 border rounded-[8px] pl-2 ${props.iserror? "border-[#e5e5e5]": "border-red-500"} `}
           value={props.state}
           onChange={(e) => props.setstate(e.target.value)}
         />
